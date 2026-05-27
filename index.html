@@ -6,12 +6,13 @@
 <title>UI-концепт Kyrgyz Turistic Airlines</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
-<body style="margin:0;padding:20px;background:#111;display:flex;justify-content:center;align-items:flex-start;min-height:100vh">
+<body style="margin:0;padding:0;background:#000;display:block;width:100%">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-.frame{max-width:375px;margin:0 auto;background:#000;border-radius:36px;overflow:hidden;border:1.5px solid #1a1a1a;font-family:'Manrope',sans-serif;color:#fff}
+.frame{width:100%;max-width:375px;margin:0 auto;background:#000;overflow:hidden;font-family:'Manrope',sans-serif;color:#fff}
+@media(min-width:376px){.frame{border-radius:36px;border:1.5px solid #1a1a1a}}
 .sb{display:flex;justify-content:space-between;align-items:center;padding:13px 22px 4px;background:#000}
 .sb-t{font-size:12px;font-weight:700;color:rgba(255,255,255,.85)}
 .sb-r{display:flex;align-items:center;gap:5px}
@@ -88,7 +89,7 @@
   </div>
 
   <div class="hero">
-    <svg width="375" height="288" viewBox="0 0 375 288" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height="288" viewBox="0 0 375 288" xmlns="http://www.w3.org/2000/svg">
       <rect width="375" height="288" fill="#0d1e36"/>
       <circle cx="42" cy="20" r="1" fill="white" opacity=".45"/>
       <circle cx="90" cy="12" r=".8" fill="white" opacity=".38"/>
