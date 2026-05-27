@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI-концепт Kyrgyz Turistic Airlines</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body style="margin:0;padding:20px;background:#111;display:flex;justify-content:center;align-items:flex-start;min-height:100vh">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+.frame{max-width:375px;margin:0 auto;background:#000;border-radius:36px;overflow:hidden;border:1.5px solid #1a1a1a;font-family:'Manrope',sans-serif;color:#fff}
+.sb{display:flex;justify-content:space-between;align-items:center;padding:13px 22px 4px;background:#000}
+.sb-t{font-size:12px;font-weight:700;color:rgba(255,255,255,.85)}
+.sb-r{display:flex;align-items:center;gap:5px}
+.bat{display:flex;align-items:center;gap:1px}
+.bat-b{width:18px;height:9px;border:1.5px solid rgba(255,255,255,.55);border-radius:2px;padding:1.5px;display:flex}
+.bat-f{width:68%;background:#4cd964;border-radius:1px}
+.bat-c{width:2px;height:5px;background:rgba(255,255,255,.5);border-radius:0 1px 1px 0;margin-left:1px}
+.tnav{display:flex;align-items:center;padding:7px 18px 11px;background:#000;gap:10px}
+.lw{display:flex;align-items:center;gap:9px;flex:1}
+.ln-k{display:block;font-size:10px;font-weight:700;letter-spacing:.1em;color:#fff;text-transform:uppercase;line-height:1.3}
+.ln-s{display:block;font-size:8px;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.12em}
+.mbtn{width:36px;height:36px;background:rgba(255,255,255,.06);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.hero{position:relative;overflow:hidden}
+.hcont{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 18px 24px}
+.gbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(22,160,70,.18);border:.5px solid rgba(35,200,90,.35);border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;color:#3ddb78;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px;width:fit-content}
+.gdot{width:5px;height:5px;background:#2bbd5e;border-radius:50%;animation:bl 2s infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.25}}
+.htitle{font-family:'Bebas Neue',sans-serif;font-size:57px;line-height:.95;color:#fff;letter-spacing:.02em}
+.htitle em{color:#C8001A;font-style:normal}
+.sec{padding:14px 14px 0}
+.bc{background:#0a0a0a;border:.5px solid rgba(255,255,255,.09);border-radius:18px;padding:14px;margin-bottom:14px}
+.btabs{display:flex;gap:4px;margin-bottom:12px}
+.btab{font-size:11px;font-weight:700;padding:5px 13px;border-radius:20px;color:rgba(255,255,255,.32);letter-spacing:.04em;cursor:pointer}
+.btab.on{background:#C8001A;color:#fff}
+.brow{display:grid;grid-template-columns:1fr 30px 1fr;gap:6px;align-items:end}
+.brow2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.bf label{font-size:9px;font-weight:700;color:rgba(255,255,255,.26);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px}
+.bfi{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.05);border:.5px solid rgba(255,255,255,.09);border-radius:10px;padding:0 10px;height:44px}
+.bfi i{color:rgba(255,255,255,.28);font-size:15px;flex-shrink:0}
+.bfi span{font-size:12px;font-weight:600;color:#fff}
+.sw{width:30px;height:44px;background:rgba(200,0,26,.1);border:.5px solid rgba(200,0,26,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;align-self:end}
+.sw i{color:#C8001A;font-size:14px}
+.sbtn{width:100%;margin-top:10px;height:48px;background:#C8001A;border:none;border-radius:12px;color:#fff;font-family:'Manrope',sans-serif;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:.04em}
+.dl{font-size:10px;font-weight:700;color:rgba(255,255,255,.26);letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}
+.chips{display:flex;gap:8px}
+.chip{background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.09);border-radius:10px;padding:10px 14px;display:flex;flex-direction:column;gap:3px;cursor:pointer;flex:1}
+.chip-c{font-size:13px;font-weight:600;color:#fff}
+.chip-p{font-size:11px;color:#C9993A;font-weight:600}
+.stats{display:flex;border-top:.5px solid rgba(255,255,255,.06);margin-top:18px}
+.stat{flex:1;display:flex;flex-direction:column;align-items:center;padding:13px 4px;border-right:.5px solid rgba(255,255,255,.06)}
+.stat:last-child{border-right:none}
+.sn{font-family:'Bebas Neue',sans-serif;font-size:21px;color:#fff}
+.sn em{color:#C8001A;font-style:normal}
+.sl{font-size:9px;color:rgba(255,255,255,.26);text-transform:uppercase;letter-spacing:.07em;text-align:center;margin-top:1px}
+.bnav{display:flex;background:#000;border-top:.5px solid rgba(255,255,255,.06);padding:10px 0 18px}
+.bn{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+.bn i{font-size:20px;color:rgba(255,255,255,.26)}
+.bn.on i{color:#C8001A}
+.bn span{font-size:9px;color:rgba(255,255,255,.22);font-weight:500}
+.bn.on span{color:#C8001A}
+</style>
+
+<h2 class="sr-only">Мобильный UI-концепт Kyrgyz Turistic Airlines — горный фоновый пейзаж, логотип бренда, зелёный статус рейсов</h2>
+
+<div class="frame">
+
+  <div class="sb">
+    <span class="sb-t">9:41</span>
+    <div class="sb-r">
+      <i class="ti ti-wifi" style="font-size:13px;color:rgba(255,255,255,.55)" aria-hidden="true"></i>
+      <div class="bat"><div class="bat-b"><div class="bat-f"></div></div><div class="bat-c"></div></div>
+    </div>
+  </div>
+
+  <div class="tnav">
+    <div class="lw">
+      <img src="data:image/png;base64,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" width="36" height="36" alt="Kyrgyz Turistic Airlines logo" style="object-fit:contain">
+      <div>
+        <span class="ln-k">Kyrgyz Turistic</span>
+        <span class="ln-s">Airlines</span>
+      </div>
+    </div>
+    <div class="mbtn"><i class="ti ti-menu-2" style="color:rgba(255,255,255,.6);font-size:17px" aria-hidden="true"></i></div>
+  </div>
+
+  <div class="hero">
+    <svg width="375" height="288" viewBox="0 0 375 288" xmlns="http://www.w3.org/2000/svg">
+      <rect width="375" height="288" fill="#0d1e36"/>
+      <circle cx="42" cy="20" r="1" fill="white" opacity=".45"/>
+      <circle cx="90" cy="12" r=".8" fill="white" opacity=".38"/>
+      <circle cx="138" cy="28" r="1" fill="white" opacity=".32"/>
+      <circle cx="176" cy="16" r=".8" fill="white" opacity=".42"/>
+      <circle cx="222" cy="9" r="1" fill="white" opacity=".36"/>
+      <circle cx="271" cy="24" r=".8" fill="white" opacity=".3"/>
+      <circle cx="314" cy="11" r="1" fill="white" opacity=".44"/>
+      <circle cx="358" cy="33" r=".8" fill="white" opacity=".32"/>
+      <circle cx="62" cy="38" r=".6" fill="white" opacity=".28"/>
+      <circle cx="152" cy="44" r=".7" fill="white" opacity=".3"/>
+      <circle cx="248" cy="36" r=".6" fill="white" opacity=".26"/>
+      <circle cx="333" cy="17" r=".7" fill="white" opacity=".35"/>
+      <circle cx="195" cy="42" r=".6" fill="white" opacity=".28"/>
+      <polygon points="0,288 0,106 28,97 55,90 82,95 105,86 125,89 148,83 172,87 194,86 212,93 237,82 258,88 278,89 302,77 322,85 344,79 363,89 375,84 375,288" fill="#2a4a6e"/>
+      <polygon points="302,77 297,86 307,86" fill="#ccd9e8" opacity=".85"/>
+      <polygon points="342,79 337,88 347,88" fill="#ccd9e8" opacity=".78"/>
+      <polygon points="235,82 231,90 239,90" fill="#ccd9e8" opacity=".72"/>
+      <polygon points="146,83 142,91 150,91" fill="#ccd9e8" opacity=".68"/>
+      <polygon points="103,86 99,94 107,94" fill="#ccd9e8" opacity=".6"/>
+      <polygon points="0,288 0,120 28,112 55,106 82,110 105,102 125,104 148,100 172,104 194,102 212,108 237,98 258,104 278,106 302,95 322,103 344,97 363,106 375,101 375,288" fill="#1f3a58"/>
+      <polygon points="300,95 297,102 303,102" fill="#ccd9e8" opacity=".55"/>
+      <polygon points="235,98 232,105 238,105" fill="#ccd9e8" opacity=".5"/>
+      <polygon points="0,288 0,136 28,129 55,123 82,127 105,119 125,121 148,117 172,121 194,119 212,124 237,115 258,121 278,122 302,112 322,118 344,114 363,122 375,117 375,288" fill="#182e48"/>
+      <polygon points="0,288 0,153 28,146 55,140 82,144 105,136 125,138 148,134 172,138 194,136 212,141 237,132 258,138 278,140 302,130 322,136 344,132 363,140 375,135 375,288" fill="#132440"/>
+      <polygon points="0,288 0,169 28,163 55,157 82,161 105,154 125,156 148,152 172,156 194,154 212,159 237,150 258,156 278,158 302,148 322,154 344,150 363,158 375,153 375,288" fill="#0e1c32"/>
+      <polygon points="0,288 0,185 28,180 55,174 82,178 105,171 125,173 148,170 172,174 194,172 212,177 237,168 258,174 278,176 302,166 322,172 344,168 363,176 375,171 375,288" fill="#0a1528"/>
+      <polygon points="0,288 0,201 28,196 55,191 82,195 105,188 125,190 148,187 172,191 194,189 212,194 237,185 258,191 278,193 302,184 322,189 344,185 363,193 375,188 375,288" fill="#07101c"/>
+      <polygon points="0,288 0,216 28,212 55,208 82,211 105,205 125,207 148,204 172,208 194,206 212,210 237,202 258,208 278,210 302,201 322,207 344,203 363,210 375,205 375,288" fill="#040c14"/>
+      <rect width="375" height="288" fill="#06101e" opacity=".42"/>
+    </svg>
+    <div class="hcont">
+      <div class="gbadge"><span class="gdot"></span>Рейсы открыты</div>
+      <div class="htitle">Кыргызстан<br><em>ждёт</em> вас</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="bc">
+      <div class="btabs">
+        <div class="btab on">В одну сторону</div>
+        <div class="btab">Туда-обратно</div>
+      </div>
+      <div class="brow">
+        <div class="bf">
+          <label>Откуда</label>
+          <div class="bfi">
+            <i class="ti ti-plane-departure" aria-hidden="true"></i>
+            <span>Бишкек</span>
+          </div>
+        </div>
+        <div class="sw"><i class="ti ti-arrows-exchange" aria-hidden="true"></i></div>
+        <div class="bf">
+          <label>Куда</label>
+          <div class="bfi">
+            <i class="ti ti-plane-arrival" aria-hidden="true"></i>
+            <span>Ош</span>
+          </div>
+        </div>
+      </div>
+      <div class="brow2">
+        <div class="bf">
+          <label>Дата</label>
+          <div class="bfi">
+            <i class="ti ti-calendar" aria-hidden="true"></i>
+            <span>15 июн 2026</span>
+          </div>
+        </div>
+        <div class="bf">
+          <label>Пассажиры</label>
+          <div class="bfi">
+            <i class="ti ti-users" aria-hidden="true"></i>
+            <span>1 взрослый</span>
+          </div>
+        </div>
+      </div>
+      <button class="sbtn" onclick="sendPrompt('Какие маршруты у Kyrgyz Turistic Airlines?')">Найти рейс ↗</button>
+    </div>
+
+    <div class="dl">Популярные направления</div>
+    <div class="chips">
+      <div class="chip"><span class="chip-c">Бишкек</span><span class="chip-p">от $29</span></div>
+      <div class="chip"><span class="chip-c">Ош</span><span class="chip-p">от $35</span></div>
+      <div class="chip"><span class="chip-c">Каракол</span><span class="chip-p">от $51</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="sn">12<em>+</em></div><div class="sl">Маршрутов</div></div>
+    <div class="stat"><div class="sn">98<em>%</em></div><div class="sl">В срок</div></div>
+    <div class="stat"><div class="sn">4<em>.8</em></div><div class="sl">Рейтинг</div></div>
+    <div class="stat"><div class="sn">40<em>к</em></div><div class="sl">Пасс.</div></div>
+  </div>
+
+  <nav class="bnav" aria-label="Навигация">
+    <div class="bn on"><i class="ti ti-home" aria-hidden="true"></i><span>Главная</span></div>
+    <div class="bn"><i class="ti ti-route" aria-hidden="true"></i><span>Рейсы</span></div>
+    <div class="bn"><i class="ti ti-ticket" aria-hidden="true"></i><span>Билеты</span></div>
+    <div class="bn"><i class="ti ti-user" aria-hidden="true"></i><span>Профиль</span></div>
+  </nav>
+
+</div>
+
+<script>
+// Tab switching for one-way / round-trip
+document.querySelectorAll('.btab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.btab').forEach(function(t){ t.classList.remove('on'); });
+    this.classList.add('on');
+  });
+});
+
+// Bottom nav switching
+document.querySelectorAll('.bn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.bn').forEach(function(b){ b.classList.remove('on'); });
+    this.classList.add('on');
+  });
+});
+
+// Popular destination chips
+document.querySelectorAll('.chip').forEach(function(chip) {
+  chip.addEventListener('click', function() {
+    document.querySelectorAll('.chip').forEach(function(c){ 
+      c.style.background='';
+      c.style.borderColor='';
+    });
+    this.style.background='rgba(200,0,26,0.15)';
+    this.style.borderColor='rgba(200,0,26,0.4)';
+  });
+});
+</script>
+</body>
+</html>
